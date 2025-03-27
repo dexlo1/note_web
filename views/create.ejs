@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm Công Việc</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Thêm Công Việc</h2>
+        <form action="/tasks" method="POST" class="task-form">
+            <label for="title">Tên Công Việc:</label>
+            <input type="text" id="title" name="title" placeholder="Nhập tên công việc" required>
+            
+            <label for="description">Mô Tả:</label>
+            <textarea id="description" name="description" placeholder="Nhập mô tả chi tiết"></textarea>
+
+            <button type="submit" class="btn">Lưu</button>
+        </form>
+        <a href="/" class="btn back-btn">Quay lại</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chỉnh Sửa Công Việc</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Chỉnh Sửa Công Việc</h2>
+        <form action="/tasks/<%= task._id %>?_method=PUT" method="POST">
+            <div class="input-group">
+                <label for="title">Tên Công Việc:</label>
+                <input type="text" id="title" name="title" value="<%= task.title %>" required>
+            </div>
+
+            <div class="input-group">
+                <label for="description">Mô Tả:</label>
+                <textarea id="description" name="description"><%= task.description %></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" name="completed" <%= task.completed ? "checked" : "" %>>
+                    Đã hoàn thành
+                </label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                <a href="/" class="btn btn-secondary">Hủy bỏ</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
